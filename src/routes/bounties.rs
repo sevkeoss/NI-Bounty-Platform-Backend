@@ -53,10 +53,10 @@ pub async fn add_bounty(
         ..Default::default()
     };
 
-    let _ = new_bounty
-        .save(&database)
-        .await
-        .map_err(|_err| StatusCode::INTERNAL_SERVER_ERROR);
+    let res = new_bounty.save(&database).await;
 
-    StatusCode::CREATED
+    match res {
+        Ok(_) => StatusCode::CREATED,
+        Err(_) => StatusCode::INTERNAL_SERVER_ERROR,
+    }
 }
