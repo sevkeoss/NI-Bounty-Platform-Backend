@@ -1,4 +1,0 @@
-id,description,price
-25d6f8ab-288b-408c-8e32-dd54887ba072,test description1,2.001
-9f5c20be-939f-445c-8d50-a707d83d1b34,test description2,6.34
-4bdca697-38c6-4b50-97f6-90d64d48fc6d,test description3,3
